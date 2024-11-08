@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transactions Dashboard</h1>
+    
+    <select id="month-dropdown">
+      <option value="0">January</option>
+      <option value="1">February</option>
+      <option value="2">March</option>
+      <option value="3">April</option>
+      <option value="4">May</option>
+      <option value="5">June</option>
+      <option value="6">July</option>
+      <option value="7">August</option>
+      <option value="8">September</option>
+      <option value="9">October</option>
+      <option value="10">November</option>
+      <option value="11">December</option>
+    </select>
+
+    <input type="text" id="search-box" placeholder="Search by Title, Description, or Price">
+
+    <table id="transactions-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Sold</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="pagination-controls">
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+    </div>
+
+    <div id="statistics">
+      <p>Total Sales Amount: $<span id="total-amount"></span></p>
+      <p>Total Sold Items: <span id="total-sold"></span></p>
+      <p>Total Not Sold Items: <span id="total-not-sold"></span></p>
+    </div>
+
+    <canvas id="bar-chart"></canvas>
+
+    <canvas id="pie-chart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
